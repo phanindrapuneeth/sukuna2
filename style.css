@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "Keshiki";
+  src: url("font-family/Keshiki/Sdasian-WyDon.ttf");
+}
+@font-face {
+  font-family: "sd-asian";
+  src: url("font-family/SD-Asian/Sdasian-WyDon.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("font-family/Poppins/Poppins-Medium.ttf");
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+  box-sizing: border-box;
+  color: #fff;
+}
+video {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.navbar {
+  color: #fff;
+  padding: 12px 10px;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  font-size: 24px;
+}
+.navbar .logo {
+  text-decoration: none;
+  font-family: "sd-asian";
+
+  font-size: 2rem;
+}
+.navbar .logo:hover {
+  transform: scale(1.5);
+
+  background: transparent;
+}
+.navbar ul a {
+  display: block;
+  padding: 8px 16px;
+  margin: 0px 10px;
+  position: relative;
+  text-decoration: none;
+  font-family: "Keshiki";
+}
+.navbar ul:has(a:hover) a:not(:hover) {
+  filter: blur(10px);
+}
+.navbar ul a:hover {
+  color: #fff;
+  box-shadow: 0 0 40px rgb(253, 2, 2);
+  background-color: #e1340d;
+  border-radius: 8px;
+}
+
+.page-con {
+  text-align: center;
+  margin-top: 12rem;
+  padding: 0px 12px;
+}
+.page-con .inner-con .heading {
+  font-size: 6rem;
+  font-family: "Noto Serif JP", serif;
+}
+.page-con .inner-con .heading :hover {
+  box-shadow: 0 0 60px #e1340d;
+}
+.page-con .btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.page-con .btns a {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  margin: 0 16px;
+  padding: 20px 24px;
+  border-radius: 6px;
+  font-size: 26px;
+  min-width: 120px;
+  text-align: center;
+  position: relative;
+  backdrop-filter: blur(60px);
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid #ffffff1e;
+}
+.page-con .btns a.active {
+  font-size: 26px;
+  background-color: #e1340d;
+}
+.page-con .btns a.active:hover {
+  box-shadow: 0 0 60px rgb(253, 2, 2);
+}
+.page-con .btns a:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(40deg, #ffffff00, #ffffff20, #ffffff00);
+  z-index: -1;
+}
+
+.page-con .btns a:nth-child(2):hover::before {
+  left: 100%;
+}
+
+.page-con .btns a:nth-child(2):hover {
+  transition-delay: 0.3s;
+  box-shadow: 0 0 40px rgb(238, 5, 5);
+  background-color: #ff310c;
+}
+.inner-con p {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.page-con .social-inos {
+  display: flex;
+  justify-content: center;
+  margin: 6rem;
+}
+.page-con .social-inos a {
+  display: block;
+  font-size: 30px;
+  margin: 0 10px;
+  height: 50px;
+  width: 50px;
+  line-height: 1.6;
+
+  border-radius: 99px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  backdrop-filter: blur(160px);
+  background-color: transparent;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.page-con .social-inos a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background: #ff310c;
+  z-index: -1;
+}
+.page-con .social-inos a:hover::after {
+  height: 100%;
+}
+.page-con .copy {
+  text-decoration: none;
+}
